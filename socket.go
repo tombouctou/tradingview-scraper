@@ -71,7 +71,7 @@ func (s *Socket) Close() (err error) {
 // AddSymbol ...
 func (s *Socket) AddSymbol(symbol string) (err error) {
 	err = s.sendSocketMessage(
-		getSocketMessage("quote_add_symbols", []interface{}{s.sessionID, symbol, getFlags()}),
+		getSocketMessage("quote_add_symbols", []interface{}{s.sessionID, symbol}),
 	)
 	return
 }
